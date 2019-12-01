@@ -19,9 +19,12 @@
     "@angular/platform-browser": "~7.1.0",
     "@angular/platform-browser-dynamic": "~7.1.0",
     "@angular/router": "~7.1.0",
+    "@openzeppelin/contracts": "^2.4.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
+    "truffle-contract": "^4.0.31",
     "tslib": "^1.9.0",
+    "web3": "^1.2.4",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

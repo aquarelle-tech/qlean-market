@@ -1,0 +1,35 @@
+<div class="card">
+    <h4 class="p-3">Órdenes de compra/venta</h4>
+  <div class="card-body m-0 p-3">
+    <table class="table table-sm table-bordered" style="height: 50%;">
+      <thead class="thead-dark">
+        <tr>
+          <th>Cant.</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr *ngFor="let item of buyOrdersBook" >
+            <td class="text-danger">{{ item.amount }} BL</td>
+            <td class="text-danger">{{ item.price }} CM </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table table-sm table-hover" style="height: 50%;">
+        <thead class="thead-dark">
+          <tr>
+            <th>Cant.</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of buyOrdersBook">
+            <td class="text-success">{{ item.amount }} BL</td>
+            <td class="text-success">{{ item.price }} CM </td>
+          </tr>
+        </tbody>
+      </table>
+  
+  </div>
+</div>

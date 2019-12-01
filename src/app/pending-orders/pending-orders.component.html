@@ -1,0 +1,31 @@
+<!-- Recent Order Table -->
+<div class="card card-table-border-none ml-2 mr-2 p-0" id="recent-orders" *ngIf="orderList">
+  <div class="card-header justify-content-between">
+    <h2>Órdenes pendientes</h2>
+    <div class="date-range-report ">
+      <span></span>
+    </div>
+  </div>
+  <div class="card-body pt-0 pb-5">
+    <table class="table card-table table-responsive table-responsive-large" style="width:100%">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th class="d-none d-md-table-cell">Cantidad</th>
+          <th class="d-none d-md-table-cell">Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orderList" [ngClass]="{'text-danger': order.isASell, 'text-success': !order.isASell}">
+          <td> {{ order.ID }} </td>
+          <td class="d-none d-md-table-cell">{{ order.amount }}</td>
+          <td class="d-none d-md-table-cell">{{ order.price / 100 }} CM</td>
+          <!-- <td>
+            <span class="badge badge-success">Completed</span>
+          </td> -->
+        </tr>
+        <tr>
+      </tbody>
+    </table>
+  </div>
+</div>

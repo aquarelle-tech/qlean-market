@@ -1,0 +1,14 @@
+<div class="card card-mini ml-2 mr-2">
+    <div class="card-body">
+        <img style="width:24px" [src]="getStatusColor()" class="pull-right">
+        <span class="text-danger pull-right">{{ getCategory() }}</span>
+        <h2>Mi balance </h2>
+
+        <p class="mb-1 text-dark"> <i class="mdi mdi-leaf text-dark"></i> <strong> {{ wasteGenerationQuotas }}</strong> Cuotas (CGR)</p>
+        <p class="small mb-3">Necesitas adquirir Bonos Limpios</p>
+        <p class="mb-1 text-dark"> <i class="mdi mdi-leaf text-success"></i> <strong>{{ creditsBalance }}</strong> Bonos Limpios</p>
+        <p class="mb-1 text-dark"> <i class="mdi mdi-leaf text-success"></i> <strong>{{ currentGoal }} CGR</strong>: Objetivo de reducción </p>
+        <p class="mt-3 text-dark"> <i class="mdi mdi-home text-success"></i> <strong>16.00</strong> Créditos Municipales <span class="text-danger small">No puedes usar tus CM</span></p>
+        <p class="small"><strong>13</strong> Días hasta la siguiente validación</p>
+    </div>
+  </div>

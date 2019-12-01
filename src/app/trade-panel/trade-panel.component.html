@@ -1,0 +1,72 @@
+<div class="card card-default card-sm card-transparent">
+  <h4 class="m-2 text-dark">
+      <i class="mdi mdi-leaf text-success"></i>
+      Intercambio de Bonos Limpios
+  </h4>
+  <div class="card-body m-0 p-2">
+    <form>
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active text-success" id="home-tab" data-toggle="tab" href="#buy" role="tab" aria-controls="buy"
+            aria-selected="true">Compra</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-danger" id="profile-tab" data-toggle="tab" href="#sell" role="tab" aria-controls="sell"
+            aria-selected="false">Venta</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="tradePanel">
+        <!-- Buy panel -->
+        <div class="tab-pane pt-3 fade show active" id="buy" role="tabpanel" aria-labelledby="buy-tab">
+          <div class="form-row">
+            <div class="col-md-12 mb-3">
+              <label for="cm-price">Precio (CM)</label>
+              <input type="text" class="form-control is-valid" id="buyPrice" name="buyPrice" placeholder="Precio (Créditos Municipales)" [(ngModel)]="price" required>
+              <div class="valid-feedback"></div>
+            </div>
+            <div class="col-md-12 mb-3">
+              <label for="validationServer02">Cantidad</label>
+              <input type="text" class="form-control is-valid" id="buyAmount" name="buyAmount" placeholder="Cantidad (Créditos municipales)" [(ngModel)]="buyAmount" required>
+              <div class="valid-feedback"></div>
+            </div>
+
+            <!-- <div class="col-md-12 mb-3">
+              <label for="buyTotal">Total</label>
+              <input type="text" [(ngModel)]="buyTotal" class="form-control is-invalid" id="buyTotal" name="buyTotal" aria-describedby="inputGroupPrepend3" readonly>
+              <div class="invalid-feedback"></div>
+            </div> -->
+
+          </div>
+          <button class="btn btn-primary" (click)="buyCredit($event)" type="submit">Comprar</button>
+        </div>
+        <!-- end Buy panel -->
+
+        <!-- Sell panel -->
+        <div class="tab-pane pt-3 fade" id="sell" role="tabpanel" aria-labelledby="">
+          <div class="form-row">
+            <div class="col-md-12 mb-3">
+              <label for="cm-price">Precio (CM)</label>
+              <input type="text" class="form-control is-valid" id="sellPrice" name="sellPrice" placeholder="Precio (Créditos Municipales)" [(ngModel)]="price" required>
+              <div class="valid-feedback"></div>
+            </div>
+            <div class="col-md-12 mb-3">
+              <label for="validationServer02">Cantidad</label>
+              <input type="text" class="form-control is-valid" id="sellAmount" name="sellAmount" placeholder="Cantidad (Créditos municipales)" [(ngModel)]="sellAmount" required>
+              <div class="valid-feedback"></div>
+            </div>
+
+            <!-- <div class="col-md-12 mb-3">
+              <label for="sellTotal">Total</label>
+              <input type="text" [(ngModel)]="sellTotal" class="form-control is-invalid" id="sellTotal" name="sellTotal" aria-describedby="inputGroupPrepend3" readonly>
+              <div class="invalid-feedback"></div>
+            </div> -->
+
+          </div>
+          <button class="btn btn-primary" (click)="sellCredit($event)" type="submit">Vender</button>
+        </div>
+        <!-- End Sell panel-->
+      </div>
+    </form>
+  </div>
+
+</div>

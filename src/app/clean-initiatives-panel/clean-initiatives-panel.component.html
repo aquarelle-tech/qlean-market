@@ -1,0 +1,37 @@
+<div class="card card-mini mb-2">
+  <div class="card-body">
+    <h2>
+      <i class="mdi mdi-leaf text-success"></i>
+      Mis Iniciativas limpias
+    </h2>
+    <div class="row">
+      <div class="col-xl-12 col-md-12">
+        <div class="row m-0">
+
+          <table class="table table-sm col-xl-12 m-0">
+            <thead>
+              <tr>
+                  <th></th>
+                  <th>Objetivo</th>
+                  <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of initiativeList">
+                <td>{{ item.title }}</td>
+                <td><strong>{{ item.quotesGoal }} CGR</strong></td>
+                <td><strong>{{ getStatusName(item.status) }} </strong> <i title="Pospuesta" *ngIf="item.status == 2" class="mdi mdi-clock text-success"></i> </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+      <div class="row m-0">
+        <div class="col-xl-12">
+          <button class="button align-self-end btn-success btn-sm">Nueva iniciativa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
